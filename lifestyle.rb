@@ -3,32 +3,40 @@ require_relative "./input.rb"
 
 module Lifestyle 
   def self.exercise(user)
+  exercise_points = 0
+  repeat = true 
+  while repeat 
     exercise = read_string("On average, would you say you do at least 2.5 hours of physical activity per week (for example, 30 minutes a day on 5 or more days a week)? yes or no") 
-    exercise_points = 0
+    
     if exercise == "yes"
       exercise_points = 0
+      repeat = false
     elsif exercise == "no"
       exercise_points = 1
+      repeat = false 
     else 
       puts "Wrong user input"
-      exercise_points = exercise(user) 
+      end 
     end 
     user[:points_total] += exercise_points
     return user
   end 
- 
-
 
   def self.diet(user)
-    food = read_string("Do you eat fruit and vegetables everyday?") 
     food_points = 0
+    repeat = true
+    while repeat 
+    food = read_string("Do you eat fruit and vegetables everyday?") 
+    
     if food == "yes"
       food_points = 0
+      repeat = false 
     elsif food == "no"
       food_points = 1
+      repeat = false 
     else 
       puts "Wrong user input"
-      food_points = diet(user)
+    end 
     end 
     user[:points_total] += food_points
     return user
@@ -36,16 +44,22 @@ module Lifestyle
 
 
   def self.blood_pressure(user)
-    bp = read_string("Are you currently taking medication for high blood pressure?") 
     bp_points = 0
+    repeat = true 
+    while repeat 
+
+    bp = read_string("Are you currently taking medication for high blood pressure?") 
+    
     if bp == "yes"
       bp_points = 6
+      repeat = false 
     elsif bp == "no"
       bp_points = 0
+      repeat = false 
     else 
       puts "Wrong user input"
-      bp_points = blood_pressure(user)
-    end 
+    end
+    end  
     user[:points_total] += bp_points
     return user 
   end 
@@ -53,17 +67,22 @@ module Lifestyle
 
 
   def self.smoking(user)
-    smokes = read_string("Do you currently smoke cigarettes or any other tobacco products on a daily basis?") 
+    repeat = true 
     smoke_points = 0
+    while repeat 
+    smokes = read_string("Do you currently smoke cigarettes or any other tobacco products on a daily basis?") 
+    
     if smokes == "yes"
       smoke_points = 2
+      repeat = false 
     elsif smokes == "no"
       smoke_points = 0
+      repeat = false 
     else 
       puts "Wrong user input"
-    smoke_points = smoking(user)
+      end 
     end 
     user[:points_total] += smoke_points 
-    return user 
-  end 
+    return user
+    end  
 end 
