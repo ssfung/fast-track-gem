@@ -1,22 +1,21 @@
 require 'csv'
 csv_text = File.read('patient_data.csv')
-
 csv = CSV.parse(csv_text, headers:true)
  
-def patient_look_up
-puts "which patient would you like to look up?"
-print = ">"
-patient_search =gets.chomp.downcase    
+# def patient_look_up
+# puts "which patient would you like to look up?"
+# print = ">"
+# patient_search =gets.chomp.downcase    
 
-found_patient = []
-csv.each do |row|
-patient = row.to_hash
-if patient_search == patient['name']
-end 
-end 
+# found_patient = []
+# csv.each do |row|
+# patient = row.to_hash
+# if patient_search == patient['name']
+# end 
+# end 
 
-end 
-patient_look_up
+# end 
+# patient_look_up
 
 
 # def menu

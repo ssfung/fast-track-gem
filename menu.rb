@@ -5,9 +5,9 @@ require_relative "./glucose_targets.rb"
 def menu
 puts "1. AUSDRISK test"
 puts "2. View patient history"
-puts "3. Diabetes targets"
+puts "3. View Diabetes targets"
 puts "4. Exit"
-puts "Please chose one option from the following menu:."
+puts "Please chose one option from the following menu:"
 user_selection = gets.chomp.to_i 
 print ">"
 return user_selection

@@ -7,10 +7,11 @@ require_relative "./glucose"
 require_relative "./lifestyle"
 require_relative "./waist_measurement"
 require "colorize"
+require "tty-prompt"
 
 def ausdrisk_test 
-puts "what is your name?"
-print ">"
+prompt = TTY::Prompt.new
+prompt.ask('What is your name?')
 name = gets.chomp 
 
 
@@ -41,7 +42,7 @@ user = get_ethnicity(user)
 #   end 
 #   return user 
 end 
-puts ausdrisk_test
+
 
 # def add_data (patient_name, score)
 # CSV.open("patient_data.csv","a") do |csv|
