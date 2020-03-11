@@ -3,7 +3,7 @@ require_relative "./input.rb"
 
 module Lifestyle 
   def self.exercise(user)
-    exercise = read_string("On average, would you say you do at least 2.5 hours of physical activity per week (for example, 30 minutes a day on 5 or more days a week)?") 
+    exercise = read_string("On average, would you say you do at least 2.5 hours of physical activity per week (for example, 30 minutes a day on 5 or more days a week)? yes or no") 
     exercise_points = 0
     if exercise == "yes"
       exercise_points = 0

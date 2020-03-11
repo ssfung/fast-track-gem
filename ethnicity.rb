@@ -3,6 +3,7 @@ require_relative "./input.rb"
 
 def get_ethnicity(user)
 user_input = read_string("Are you of Aboriginal, Torres Straight Islander or Maori descent?")
+print ">"
 valid_input = false 
 points_ethnicity = 0
 
