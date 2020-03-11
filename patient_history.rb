@@ -1,1 +1,2 @@
-need to push a csv file into this. if i get time, make it delete names? need another menu then .... 
+require 'csv'
+csv_text = File.read('patient_data.csv')
