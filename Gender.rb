@@ -16,8 +16,8 @@ def get_gender(user)
       points_total += 3 
     else 
       puts "Please choose male or female"
-      puts "you entered #{user_input}"
-      sex = read_user_input("Are you male or female?") 
+      puts "you entered #{sex}"
+      sex = read_string("Are you male or female?") 
     end
   end 
   user[:gender] = sex 
