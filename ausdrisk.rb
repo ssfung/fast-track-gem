@@ -35,7 +35,15 @@ if user[:points_total] < 5
   puts "high risk".colorize(:red)
   end 
   return user 
+
+puts "what is your name?"
+print ">"
+name = gets.chomp 
+
+
+
 end 
+
 
 ausdrisk_test
 
