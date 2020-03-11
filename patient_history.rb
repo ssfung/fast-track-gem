@@ -1,6 +1,6 @@
-require 'csv'
-csv_text = File.read('patient_data.csv')
-csv = CSV.parse(csv_text, headers:true)
+# require 'csv'
+# csv_text = File.read('patient_data.csv')
+# csv = CSV.parse(csv_text, headers:true)
  
 # def patient_look_up
 # puts "which patient would you like to look up?"
@@ -17,6 +17,11 @@ csv = CSV.parse(csv_text, headers:true)
 # end 
 # patient_look_up
 
+# def view_all
+# end 
+
+# def delete_patient
+# end 
 
 # def menu
 # puts "1. Look up all patient history" 
@@ -32,11 +37,11 @@ csv = CSV.parse(csv_text, headers:true)
 # input = menu 
 #     case input
 #     when 1 
-    
+      # view_all 
 #     when 2 
-    
+      # patient_look_up
 #     when 3
-    
+      # delete_patient 
 #     when 4
 #     exit
 #     else 
