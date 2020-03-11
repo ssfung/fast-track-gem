@@ -23,14 +23,14 @@ user = {
 user = age_group(user) 
 user = get_gender(user)
 user = get_ethnicity(user)
-# user = get_destination(user)
-# user = get_family(user)
-# user = get_glucose(user)
-# user = Lifestyle.diet(user)
-# user = Lifestyle.exercise(user)
-# user = Lifestyle.blood_pressure(user)
-# user = Lifestyle.smoking(user)
-# result = waist_measurement(user)
+user = get_destination(user)
+user = get_family(user)
+user = get_glucose(user)
+user = Lifestyle.diet(user)
+user = Lifestyle.exercise(user)
+user = Lifestyle.blood_pressure(user)
+user = Lifestyle.smoking(user)
+result = waist_measurement(user)
 
 if user[:points_total] < 5  
   puts "low risk, approximately 1 in 100 will have diabetes".colorize(:green)
@@ -44,17 +44,15 @@ end
 
 
 
-def add_data 
-CSV.open('patient_data.csv','a') do |csv|
-csv << [ausdrisk_test(name), :points_total]
-end 
-end 
+# def add_data 
+# CSV.open('patient_data.csv','a') do |csv|
+# csv << [ausdrisk_test(name), :points_total]
+# end 
+# end 
 
 
-ausdrisk_test
-add_data
-
-
-
+# ausdrisk_test
+# add_data
+# p csv.to_a.last 
 
 

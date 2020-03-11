@@ -10,18 +10,19 @@ puts "4. Exit"
 puts "Please chose one option from the following menu:."
 user_selection = gets.chomp.to_i 
 print ">"
+return user_selection
 end
 
-user_selection = menu 
-    case 
+input = menu 
+    case input
     when 1 
-    ausdrisk
+    ausdrisk_test
     when 2 
     patient_history
     when 3
     view_targets
     when 4
-    Exit
+    exit
     else 
    puts "Please choose an option from 1-4 only"
 end
