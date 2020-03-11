@@ -1,6 +1,6 @@
 def get_family(user)
   puts "Have either of your parents, or any of your brothers or sisters been diagnosed with diabetes (type 1 or type 2)? "
-  puts "Yes or No"
+  puts "yes or No"
   print ">"
   user_input = gets.chomp.to_s.downcase
 
@@ -10,7 +10,8 @@ def get_family(user)
     family_points = 0
   else 
     puts "Wrong user input"
-    family_points = family
+    family_points = get_family(user)
+
   end 
   return user 
   return family_points

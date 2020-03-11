@@ -11,7 +11,7 @@ module Lifestyle
       exercise_points = 1
     else 
       puts "Wrong user input"
-      exercise_points = exercise  
+      exercise_points = exercise(user) 
     end 
     user[:points_total] += exercise_points
     return user
@@ -28,7 +28,7 @@ module Lifestyle
       food_points = 1
     else 
       puts "Wrong user input"
-      food_points = diet 
+      food_points = diet(user)
     end 
     user[:points_total] += food_points
     return user
@@ -44,7 +44,7 @@ module Lifestyle
       bp_points = 0
     else 
       puts "Wrong user input"
-      bp_points = blood_pressure 
+      bp_points = blood_pressure(user)
     end 
     user[:points_total] += bp_points
     return user 
@@ -61,7 +61,7 @@ module Lifestyle
       smoke_points = 0
     else 
       puts "Wrong user input"
-    smoke_points = smoking
+    smoke_points = smoking(user)
     end 
     user[:points_total] += smoke_points 
     return user 

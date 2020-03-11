@@ -24,5 +24,4 @@ def get_gender(user)
   user[:points_total] += points_total 
   return user
 end
-# puts points_total = gender
 
