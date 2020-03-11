@@ -44,13 +44,15 @@ end
 
 
 
-# def add_data 
-# CSV.open('patient_data.csv','a') do |csv|
-# csv << [name, :points_total]
-# end 
+def add_data 
+CSV.open('patient_data.csv','a') do |csv|
+csv << [ausdrisk_test(name), :points_total]
+end 
+end 
 
 
 ausdrisk_test
+add_data
 
 
 
