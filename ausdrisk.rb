@@ -9,6 +9,11 @@ require_relative "./waist_measurement"
 require "colorize"
 
 def ausdrisk_test 
+puts "what is your name?"
+print ">"
+name = gets.chomp 
+
+
 user = {
   gender: nil,
   ethnicity: nil,
@@ -35,14 +40,14 @@ if user[:points_total] < 5
   puts "high risk".colorize(:red)
   end 
   return user 
-
-puts "what is your name?"
-print ">"
-name = gets.chomp 
-
-
-
 end 
+
+
+
+# def add_data 
+# CSV.open('patient_data.csv','a') do |csv|
+# csv << [name, :points_total]
+# end 
 
 
 ausdrisk_test

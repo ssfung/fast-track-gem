@@ -1,6 +1,5 @@
-
-# require_relative "./ausdrisk.rb"
-# require_relative "./patient_history.rb"
+require_relative "./ausdrisk.rb"
+require_relative "./patient_history.rb"
 require_relative "./glucose_targets.rb"
 
 def menu
@@ -16,9 +15,9 @@ end
 user_selection = menu 
     case 
     when 1 
-    # ausdrisk
+    ausdrisk
     when 2 
-    # patient_history
+    patient_history
     when 3
     view_targets
     when 4
