@@ -4,7 +4,7 @@ require_relative "./glucose_targets.rb"
 
 def menu
 puts "1. AUSDRISK test"
-puts "2. View patient history"
+puts "2. View patient data"
 puts "3. View Diabetes targets"
 puts "4. Exit"
 puts "Please chose one option from the following menu:"
@@ -18,7 +18,7 @@ input = menu
     when 1 
     ausdrisk_test
     when 2 
-    patient_history
+    menu_patient 
     when 3
     view_targets
     when 4

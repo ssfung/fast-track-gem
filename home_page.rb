@@ -1,4 +1,5 @@
 
 require artii 
-print artii 'Art!'
+$artii = Artii::Base.new
+print artii 'Diabetes'
 # puts artii 'DIABETES!'
