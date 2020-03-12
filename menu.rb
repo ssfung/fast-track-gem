@@ -1,8 +1,16 @@
 require_relative "./ausdrisk.rb"
 require_relative "./patient_history.rb"
 require_relative "./glucose_targets.rb"
+require "artii"
+
+$arter = Artii::Base.new
+
+
+
 
 def menu
+system 'clear'
+puts $arter.asciify("DIABETES")
 puts "1. AUSDRISK test"
 puts "2. View patient data"
 puts "3. View Diabetes targets"

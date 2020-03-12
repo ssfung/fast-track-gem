@@ -24,8 +24,8 @@ end
 
 def update_patient(patients_array)
   puts "which patient would you like to look up?"
-  print = ">"
   patient_search = gets.chomp.downcase
+  print = ">"
   found_patient = nil 
    patients_array.each do |patient|
     if patient_search == patient["name"]
@@ -40,11 +40,24 @@ def update_patient(patients_array)
       found_patient = patient
       patient['score'] = new_score
     end
-  
+  end
 end 
  
-puts patients_array 
+
+def delete_patient(patients_array)
+puts "which patient would you like to delete?"
+patient_search = gets.chomp.to
+print = ">"
+found_patient = nil 
+
+  patients_array.each do |patient| 
+    if patient_search == patient["name"]
+    found_patient = patient
+    patients_array.delete_at(patient)
+    end 
+  end 
 end 
+
 
 def menu_patient 
   while true
@@ -73,9 +86,5 @@ def menu_patient
   end 
 end 
 
-menu_patient 
 
-
-
-
-# end 
+#
