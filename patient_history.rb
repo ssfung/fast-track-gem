@@ -23,12 +23,27 @@ def read_csv(csv)
 end 
 
 def update_patient(patients_array)
-patient_look_up
-puts "what was the patient's new score? "
-new_score = gets.chomp
-print ">"
-return new_score
-patients_array << new_score 
+  puts "which patient would you like to look up?"
+  print = ">"
+  patient_search = gets.chomp.downcase
+  found_patient = nil 
+   patients_array.each do |patient|
+    if patient_search == patient["name"]
+      found_patient = patient
+    end 
+  end 
+  puts "what was the patient's new score? "
+  new_score = gets.chomp
+  print ">"
+  patients_array.each do |patient|
+      if patient_search == patient["name"]
+      found_patient = patient
+      patient['score'] = new_score
+    end
+  
+end 
+ 
+puts patients_array 
 end 
 
 def menu_patient 
@@ -37,8 +52,8 @@ def menu_patient
     csv = CSV.parse(csv_text, headers:true)
     patients_array = read_csv(csv)
     puts "1. Look up all patient history" 
-    puts "2. Search for a patient history"
-    puts "3. Delete patient history"
+    puts "2. Update patient "
+    puts "3. Delete patient"
     puts "4. Exit"
     puts "Please chose one option from the following menu:"
     user_selection = gets.chomp.to_i 
