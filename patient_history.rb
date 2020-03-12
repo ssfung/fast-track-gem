@@ -1,4 +1,5 @@
 require 'csv'
+require "tty-prompt"
 
 def patient_look_up(patients_array)
   puts "which patient would you like to look up?"
@@ -58,20 +59,21 @@ found_patient = nil
   end 
 end 
 
-
 def menu_patient 
   while true
     csv_text = File.read("patient_data.csv")
     csv = CSV.parse(csv_text, headers:true)
     patients_array = read_csv(csv)
-    puts "1. Look up all patient history" 
-    puts "2. Update patient "
-    puts "3. Delete patient"
-    puts "4. Exit"
-    puts "Please chose one option from the following menu:"
-    user_selection = gets.chomp.to_i 
-    print ">"
-    case user_selection
+
+  choices = [
+  {name: 'Look up all patient history', value:1},
+  {name: 'Update Patient', value:2},
+  {name: 'Delete patient', value:3},
+  {name: 'Exit', value:4}
+  ] 
+prompt = TTY::Prompt.new
+user_input = prompt.select("Select an action?", choices)
+    case user_input 
     when 1 
       p patient_look_up(patients_array)
     when 2 
@@ -79,7 +81,7 @@ def menu_patient
     when 3
       delete_patient 
     when 4
-      exit
+     exit 
     else 
       puts "Please choose an option from 1-4 only"
     end 
@@ -87,4 +89,5 @@ def menu_patient
 end 
 
 
-#
+
+

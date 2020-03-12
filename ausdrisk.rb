@@ -17,10 +17,10 @@ def add_data (patient_name, score)
 end
 
 def ausdrisk_test 
+  system 'clear'
   prompt = TTY::Prompt.new
   prompt.ask('What is your name?')
   name = gets.chomp 
-
 
   user = {
     name: name, 

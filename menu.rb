@@ -12,10 +12,14 @@ def menu
 system 'clear'
 puts $arter.asciify("DIABETES")
 puts "1. AUSDRISK test"
+puts " "
 puts "2. View patient data"
+puts " "
 puts "3. View Diabetes targets"
+puts " "
 puts "4. Exit"
-puts "Please chose one option from the following menu:"
+puts " "
+puts "Please chose one option from the above menu:"
 user_selection = gets.chomp.to_i 
 print ">"
 return user_selection
