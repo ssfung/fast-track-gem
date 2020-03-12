@@ -45,7 +45,7 @@ def ausdrisk_test
   if user[:points_total] < 5  
     puts "low risk, approximately 1 in 100 will have diabetes".colorize(:green)
   elsif user[:points_total] > 6 && user[:points_total] <=11
-    puts "intermediate risk".colorize(:purple)
+    puts "intermediate risk".colorize(:blue)
   else user[:points_total] > 12
     puts "high risk".colorize(:red)
   end 

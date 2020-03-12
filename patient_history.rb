@@ -2,6 +2,8 @@ require 'csv'
 require "tty-prompt"
 
 def patient_look_up(patients_array)
+system 'clear'
+while true
   puts "which patient would you like to look up?"
   print = ">"
   patient_search =gets.chomp.downcase
@@ -15,6 +17,7 @@ def patient_look_up(patients_array)
   end
   return found_patient
 end 
+end 
 
 def read_csv(csv)
   arr = []
@@ -26,6 +29,7 @@ def read_csv(csv)
 end 
 
 def update_patient(patients_array)
+system 'clear'
   puts "which patient would you like to look up?"
   patient_search = gets.chomp.downcase
   print = ">"
@@ -48,15 +52,16 @@ end
  
 
 def delete_patient(patients_array)
+system 'clear'
 puts "which patient would you like to delete?"
-patient_search = gets.chomp.to
+patient_search = gets.chomp
 print = ">"
 found_patient = nil 
 
   patients_array.each do |patient| 
     if patient_search == patient["name"]
     found_patient = patient
-    patients_array.delete_at(patient)
+    patients_array.delete(found_patient)
     end 
   end 
 end 
@@ -81,7 +86,7 @@ user_input = prompt.select("Select an action?", choices)
     when 2 
       p update_patient(patients_array)
     when 3
-      delete_patient 
+      delete_patient(patients_array)
     when 4
      exit 
     else 

@@ -2,6 +2,7 @@
 require_relative "./input.rb"
 
 def get_ethnicity(user)
+system 'clear'
 user_input = read_string("Are you of Aboriginal, Torres Straight Islander or Maori descent? yes or not")
 print ">"
 valid_input = false 

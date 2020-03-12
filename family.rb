@@ -1,4 +1,5 @@
 def get_family(user)
+system 'clear'
   family_points = 0
   repeat = true
   while repeat

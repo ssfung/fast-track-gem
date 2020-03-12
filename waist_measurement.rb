@@ -1,4 +1,5 @@
 def get_waist_measurement
+system 'clear'
   puts 'Please measure your waist measurement taken  below the ribs usually at the level of the navel, and while standing'
   puts 'Waist measurement (in cm)'
   print '>'

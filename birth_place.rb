@@ -2,6 +2,7 @@
 
 
 def birth_place_menu
+system 'clear'
   puts "1. Australia"
   puts "2. Asia (including the Indian sub-continent), Middle East, North Africa, Southern Europe"
   puts "3. Other"

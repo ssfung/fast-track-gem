@@ -1,5 +1,5 @@
 def get_glucose(user)
-  
+  system 'clear'
   glucose_points = 0
   repeat = true
   while repeat

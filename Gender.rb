@@ -3,6 +3,7 @@ require_relative "./input.rb"
 
 
 def get_gender(user)
+system 'clear'
   sex = read_string("Are you male or female?") 
   valid_input = false 
   points_total = 0

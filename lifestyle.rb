@@ -3,6 +3,7 @@ require_relative "./input.rb"
 
 module Lifestyle 
   def self.exercise(user)
+  system 'clear'
   exercise_points = 0
   repeat = true 
   while repeat 
@@ -26,7 +27,7 @@ module Lifestyle
     food_points = 0
     repeat = true
     while repeat 
-    food = read_string("Do you eat fruit and vegetables everyday?") 
+    food = read_string("Do you eat fruit and vegetables everyday? yes or no") 
     
     if food == "yes"
       food_points = 0
@@ -48,7 +49,7 @@ module Lifestyle
     repeat = true 
     while repeat 
 
-    bp = read_string("Are you currently taking medication for high blood pressure?") 
+    bp = read_string("Are you currently taking medication for high blood pressure? yes or no") 
     
     if bp == "yes"
       bp_points = 6
@@ -70,7 +71,7 @@ module Lifestyle
     repeat = true 
     smoke_points = 0
     while repeat 
-    smokes = read_string("Do you currently smoke cigarettes or any other tobacco products on a daily basis?") 
+    smokes = read_string("Do you currently smoke cigarettes or any other tobacco products on a daily basis? yes or no ") 
     
     if smokes == "yes"
       smoke_points = 2
