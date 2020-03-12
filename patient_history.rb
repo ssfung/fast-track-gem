@@ -9,6 +9,8 @@ def patient_look_up(patients_array)
   patients_array.each do |patient|
     if patient_search == patient["name"]
       found_patient = patient
+    else 
+    puts 'patient does not exist'
     end
   end
   return found_patient
