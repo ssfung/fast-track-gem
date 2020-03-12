@@ -9,4 +9,3 @@ table = Terminal::Table.new :rows => rows
 table = Terminal::Table.new :headings => ['Name', 'Target'], :rows => rows
 puts table 
 end 
- 

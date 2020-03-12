@@ -1,6 +1,21 @@
 require 'csv'
 require "tty-prompt"
 
+
+def update_data(patients)
+    CSV.open("patient_data.csv","w") do |csv|
+      csv << ["name","score"]
+      patients.each do | patient|
+        print "PATIENT: "
+        p patient
+        csv << patient.values
+    end
+  end
+end
+
+
+
+
 def patient_look_up(patients_array)
 system 'clear'
 while true
@@ -10,12 +25,11 @@ while true
   found_patient = nil
   patients_array.each do |patient|
     if patient_search == patient["name"]
-      found_patient = patient
+      return patient
     else 
-    puts 'patient does not exist'
     end
   end
-  return found_patient
+    puts 'patient does not exist'
 end 
 end 
 
@@ -46,13 +60,15 @@ system 'clear'
       if patient_search == patient["name"]
       found_patient = patient
       patient['score'] = new_score
+      
+       
     end
   end
+  update_data(patients_array)
 end 
  
 
 def delete_patient(patients_array)
-system 'clear'
 puts "which patient would you like to delete?"
 patient_search = gets.chomp
 print = ">"
@@ -64,9 +80,11 @@ found_patient = nil
     patients_array.delete(found_patient)
     end 
   end 
+    update_data(patients_array)
 end 
 
 def menu_patient 
+system 'clear'
   while true
     csv_text = File.read("patient_data.csv")
     csv = CSV.parse(csv_text, headers:true)

@@ -43,30 +43,16 @@ def ausdrisk_test
   result = waist_measurement(user)
 
   if user[:points_total] < 5  
-    puts "low risk, approximately 1 in 100 will have diabetes".colorize(:green)
+    puts "Low risk - You scored 6-11 points in the AUSDRISK. You may be at increased risk of type 2 diabetes. Improving your lifestyle may reduce your risk of type 2 diabetes".colorize(:green)
   elsif user[:points_total] > 6 && user[:points_total] <=11
-    puts "intermediate risk".colorize(:blue)
+    puts "intermediate risk".colorize(:orange)
   else user[:points_total] > 12
-    puts "high risk".colorize(:red)
+    puts "You scored 12 points or more in the AUSDRISK. You may have
+undiagnosed type 2 diabetes or be at high risk of developing the
+disease. Speak to your healthcare professional as soon as possible.". colorize(:red)
   end 
   
   add_data(user[:name], user[:points_total])
 end
-
- 
-#   user = {
-#     name: "ed", 
-#     gender: 'male',
-#     ethnicity: 'no',
-#     points_total: 40,
-    
-#   }
-
-# add_data(user[:name], user[:points_total])
-
-
-# ausdrisk_test
-# add_data
-
 
 
