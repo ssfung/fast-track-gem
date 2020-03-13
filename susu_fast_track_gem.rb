@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require_relative
-"susu_fast_track_gem/version"
+'susu_fast_track_gem/version'
 
 module SusuFastTrackGem
   class Error < StandardError; end

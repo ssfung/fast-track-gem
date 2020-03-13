@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 def get_waist_measurement
-system 'clear'
+  system 'clear'
   puts 'Please measure your waist measurement taken  below the ribs usually at the level of the navel, and while standing'
   puts 'Waist measurement (in cm)'
   print '>'
@@ -48,5 +50,5 @@ def waist_measurement(user)
   end
   end
   end
-  return user
+  user
 end

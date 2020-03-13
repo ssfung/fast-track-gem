@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 def read_string(question)
-puts question 
-  print ">"
+  puts question
+  print '>'
   user_input = gets.chomp
 end
 
