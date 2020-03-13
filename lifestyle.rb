@@ -4,7 +4,6 @@ require_relative './input.rb'
 
 module Lifestyle
   def self.exercise(user)
-    system 'clear'
     exercise_points = 0
     repeat = true
     while repeat
